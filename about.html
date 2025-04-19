@@ -3,27 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于我们</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>关于我们 | 三文化工</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 200px;
+      margin-right: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin: 10px 0;
+      cursor: pointer;
+      color: #0073aa;
+    }
+
+    .sidebar li:hover {
+      text-decoration: underline;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    .main-content {
+      flex: 1;
+    }
+
+    .main-content h2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>公司名称</h1>
+    <h1>三文化工</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">首页</a></li>
-        <li><a href="about.html">关于我们</a></li>
-        <li><a href="services.html">服务内容</a></li>
-        <li><a href="contact.html">联系我们</a></li>
-      </ul>
+      <a href="index.html">首页</a>
+      <a href="about.html">关于我们</a>
+      <a href="products.html">产品列表</a>
+      <a href="safety.html">安全与运输</a>
+      <a href="contact.html">联系我们</a>
     </nav>
   </header>
-  <main>
-    <h2>关于我们</h2>
-    <p>我们公司成立于xxxx年，专注于xxxx领域，拥有专业的团队与丰富的经验。</p>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h3>关于我们</h3>
+      <ul>
+        <li onclick="showSection('intro')">公司简介</li>
+        <li onclick="showSection('license')">经营资质</li>
+        <li onclick="showSection('brands')">合作品牌</li>
+        <li onclick="showSection('advantage')">我们的优势</li>
+      </ul>
+    </aside>
+
+    <section class="main-content">
+      <div id="intro" class="content-section active">
+        <h2>公司简介</h2>
+        <p>
+          三文化工专注于化工、糖类、醇类等多个领域的产品研发、销售与国际贸易。我们致力于为客户提供高品质、稳定可靠的产品解决方案。
+        </p>
+      </div>
+
+      <div id="license" class="content-section">
+        <h2>经营资质</h2>
+        <p>
+          我们拥有完整的进出口权、危险化学品经营许可证，以及符合国际标准的产品检测与质量认证资质。
+        </p>
+      </div>
+
+      <div id="brands" class="content-section">
+        <h2>合作品牌</h2>
+        <p>
+          我们与多家全球知名化工企业保持长期合作关系，提供全球领先的原材料与配套技术服务。
+        </p>
+      </div>
+
+      <div id="advantage" class="content-section">
+        <h2>我们的优势</h2>
+        <p>
+          高效供应链、专业技术团队、快速响应客户需求、严格的品质控制流程是我们持续发展的核心优势。
+        </p>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 公司名称. 保留所有权利。</p>
+    <p>&copy; 2025 三文化工 | 版权所有</p>
   </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+
+    // 默认显示公司简介
+    showSection('intro');
+  </script>
 </body>
 </html>

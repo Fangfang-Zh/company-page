@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>产品列表 | 三文化工</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .container {
+      display: flex;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 200px;
+      margin-right: 20px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin: 10px 0;
+      cursor: pointer;
+      color: #0073aa;
+    }
+
+    .sidebar li:hover {
+      text-decoration: underline;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .product-item {
+      width: 200px;
+      text-align: center;
+    }
+
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>三文化工</h1>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="about.html">关于我们</a>
+      <a href="products.html">产品列表</a>
+      <a href="safety.html">安全与运输</a>
+      <a href="contact.html">联系我们</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <h3>产品分类</h3>
+      <ul>
+        <li onclick="filterProducts('all')">所有</li>
+        <li onclick="filterProducts('chemicals')">化工类</li>
+        <li onclick="filterProducts('sugar')">糖类</li>
+        <li onclick="filterProducts('alcohol')">醇类</li>
+      </ul>
+    </aside>
+
+    <section class="products" id="productList">
+      <!-- 示例产品 -->
+      <div class="product-item chemicals">
+        <a href="product-a.html"><img src="assets/img/product-a.jpg" alt="A产品" /></a>
+        <p>A产品</p>
+      </div>
+      <div class="product-item chemicals">
+        <a href="product-b.html"><img src="assets/img/product-b.jpg" alt="B产品" /></a>
+        <p>B产品</p>
+      </div>
+      <div class="product-item sugar">
+        <a href="product-d.html"><img src="assets/img/product-d.jpg" alt="D产品" /></a>
+        <p>D产品</p>
+      </div>
+      <div class="product-item sugar">
+        <a href="product-e.html"><img src="assets/img/product-e.jpg" alt="E产品" /></a>
+        <p>E产品</p>
+      </div>
+      <div class="product-item alcohol">
+        <a href="product-g.html"><img src="assets/img/product-g.jpg" alt="G产品" /></a>
+        <p>G产品</p>
+      </div>
+      <div class="product-item alcohol">
+        <a href="product-k.html"><img src="assets/img/product-k.jpg" alt="K产品" /></a>
+        <p>K产品</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 三文化工 | 版权所有</p>
+  </footer>
+
+  <script>
+    function filterProducts(category) {
+      const products = document.querySelectorAll('.product-item');
+      products.forEach(product => {
+        if (category === 'all' || product.classList.contains(category)) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    }
+
+    // 默认显示所有产品
+    filterProducts('all');
+  </script>
+</body>
+</html>
