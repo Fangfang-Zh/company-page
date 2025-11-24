@@ -1,125 +1,710 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>产品列表 | 三文化工</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .container {
-      display: flex;
-      padding: 20px;
-    }
-
-    .sidebar {
-      width: 200px;
-      margin-right: 20px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sidebar li {
-      margin: 10px 0;
-      cursor: pointer;
-      color: #0073aa;
-    }
-
-    .sidebar li:hover {
-      text-decoration: underline;
-    }
-
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .product-item {
-      width: 200px;
-      text-align: center;
-    }
-
-    .product-item img {
-      max-width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      padding: 5px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品中心 - 青岛三文化工有限公司</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>三文化工</h1>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我们</a>
-      <a href="products.html">产品列表</a>
-      <a href="safety.html">安全与运输</a>
-      <a href="contact.html">联系我们</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>青岛三文化工</h1>
+                <p class="tagline">专业化工服务 品质铸就未来</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">关于我们</a></li>
+                    <li><a href="products.html" class="active">产品中心</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main class="container">
-    <aside class="sidebar">
-      <h3>产品分类</h3>
-      <ul>
-        <li onclick="filterProducts('all')">所有</li>
-        <li onclick="filterProducts('chemicals')">化工类</li>
-        <li onclick="filterProducts('sugar')">糖类</li>
-        <li onclick="filterProducts('alcohol')">醇类</li>
-      </ul>
-    </aside>
-
-    <section class="products" id="productList">
-      <!-- 示例产品 -->
-      <div class="product-item chemicals">
-        <a href="product-a.html"><img src="assets/img/product-a.jpg" alt="A产品" /></a>
-        <p>A产品</p>
-      </div>
-      <div class="product-item chemicals">
-        <a href="product-b.html"><img src="assets/img/product-b.jpg" alt="B产品" /></a>
-        <p>B产品</p>
-      </div>
-      <div class="product-item sugar">
-        <a href="product-d.html"><img src="assets/img/product-d.jpg" alt="D产品" /></a>
-        <p>D产品</p>
-      </div>
-      <div class="product-item sugar">
-        <a href="product-e.html"><img src="assets/img/product-e.jpg" alt="E产品" /></a>
-        <p>E产品</p>
-      </div>
-      <div class="product-item alcohol">
-        <a href="product-g.html"><img src="assets/img/product-g.jpg" alt="G产品" /></a>
-        <p>G产品</p>
-      </div>
-      <div class="product-item alcohol">
-        <a href="product-k.html"><img src="assets/img/product-k.jpg" alt="K产品" /></a>
-        <p>K产品</p>
-      </div>
+    <section class="page-header">
+        <div class="container">
+            <h1>产品中心</h1>
+            <p>专业电镀化工产品 · 符合欧盟环保指令 WEEE、ROHS、ELV</p>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 三文化工 | 版权所有</p>
-  </footer>
+    <section class="product-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>经营品种</h2>
+                    <p>经营品种包括<strong>前后处理药品</strong>、<strong>光亮剂</strong>、<strong>防护剂</strong>、<strong>自动化生产线</strong>、<strong>电镀用接口设备</strong>等产品。</p>
+                    <p>近年配合欧盟<span class="highlight">WEEE</span>、<span class="highlight">ROHS</span>及<span class="highlight">ELV</span>的环保指令，加强质量管理与国际接轨。</p>
+                </div>
+                <div class="intro-contact">
+                    <div class="contact-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <div class="contact-details">
+                            <span class="contact-label">咨询热线</span>
+                            <span class="contact-number">13954225608</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function filterProducts(category) {
-      const products = document.querySelectorAll('.product-item');
-      products.forEach(product => {
-        if (category === 'all' || product.classList.contains(category)) {
-          product.style.display = 'block';
-        } else {
-          product.style.display = 'none';
-        }
-      });
-    }
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <aside class="products-sidebar">
+                    <h3>产品分类</h3>
+                    <ul class="category-list">
+                        <li><a href="#pretreatment" class="active">前处理系列</a></li>
+                        <li><a href="#copper-plating">镀铜系列</a></li>
+                        <li><a href="#nickel-plating">镀镍系列</a></li>
+                        <li><a href="#chrome-plating">镀铬系列</a></li>
+                        <li><a href="#zinc-plating">镀锌系列</a></li>
+                        <li><a href="#special-process">特殊工艺</a></li>
+                        <li><a href="#green-plating">环保电镀</a></li>
+                        <li><a href="#post-treatment">镀后处理</a></li>
+                        <li><a href="#precious-metals">贵金属产品</a></li>
+                        <li><a href="#equipment">设备仪器</a></li>
+                        <li><a href="#materials">化工原料</a></li>
+                        <li><a href="#anodes">阳极材料</a></li>
+                    </ul>
+                </aside>
+                <div class="products-content">
+                    <!-- 前处理系列 -->
+                    <div id="pretreatment" class="product-category">
+                        <h2>前处理系列</h2>
+                        
+                        <div class="product-group">
+                            <h3>1. 浸渍清洁处理 (Dipping Cleaner)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>AK</strong> - 碱性强力除油剂（铁件专用）</li>
+                                <li><strong>BEG-350</strong> - 钢铁件冷浸软化除油剂（弱碱通用）</li>
+                                <li><strong>BEG-306</strong> - 酸性冷浸除油除锈剂（铁件）</li>
+                                <li><strong>BG-20</strong> - 铜、锌合金、铝、塑胶浸渍除油剂</li>
+                            </ul>
+                        </div>
 
-    // 默认显示所有产品
-    filterProducts('all');
-  </script>
+                        <div class="product-group">
+                            <h3>2. 电解清洁处理 (Electrolytic Cleaner)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>BG-3200</strong> - 铜、锌、铝铁合金件电解除油剂</li>
+                                <li><strong>BX-NT</strong> - 强力阳极电解除油剂（铁件）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>3. 除蜡处理 (Buffing Residues Cleaner)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>BG-300</strong> - 锌合金件除蜡水</li>
+                                <li><strong>P-1032</strong> - 超力除蜡剂（铜、铁件）</li>
+                                <li><strong>BG-500</strong> - 除蜡水（铜、青铜、锌铸、不锈钢件）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>4. 活化处理 (Activator)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>酸盐B</strong> - 锌合金件除蜡水</li>
+                                <li><strong>P-1032</strong> - 超力除蜡剂（铜、铁件）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>5. 脱镀剥离处理 (Immersion and Electro-stripper)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>ER-V8</strong> - 电解脱挂具（铜、镍、铬）镀层用剂</li>
+                                <li><strong>ER-V9</strong> - 电解脱挂具（铜、镍、铬）镀层用剂</li>
+                                <li><strong>GT-103</strong> - 脱金水</li>
+                                <li><strong>Rip-Master 1219</strong> - 脱镍剂</li>
+                                <li><strong>ST</strong> - 铜底附加剂（与Rip-Master 1219共用）</li>
+                                <li><strong>F-80</strong> - 脱锡剂</li>
+                                <li><strong>NRP-10</strong> - 化学镀镍脱镀剂（塑料件用）</li>
+                                <li><strong>NRP-20</strong> - 化学镀镍脱镀剂（铁件用）</li>
+                                <li><strong>NRP-30</strong> - 化学镀镍脱镀剂（铜件用）</li>
+                                <li><strong>B-9系列</strong> - 各类脱镍剂</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 镀铜系列 -->
+                    <div id="copper-plating" class="product-category">
+                        <h2>镀铜系列</h2>
+                        
+                        <div class="product-group">
+                            <h3>6. 氰化镀铜 (Cyanide Copper Plating Solution)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>2#光亮氰化镀铜</strong> - 氰化铜单一光亮剂（挂镀、滚镀）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>7. 无氰镀铜 (Non Cyanide Copper Plating Solution)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>HN-CS200</strong> - 无氰镀铜，适合于锌合金、铁件打底用</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>8. 硫酸铜电镀 (Acid Copper Plating Solution)</h3>
+                            <p>酸性光亮镀铜添加剂：</p>
+                            <ul class="product-detail-list">
+                                <li><strong>鼎级 (EXULTRA)</strong></li>
+                                <li><strong>高填平 (SUPER)</strong></li>
+                                <li><strong>安美特 (ULTRA)</strong></li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>9. 焦磷酸铜电镀 (Copper Pyrophosphate Plating)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>S-7</strong> - 焦磷酸铜超级光亮剂（单一光剂）</li>
+                                <li><strong>聚磷酸</strong> - 调节pH值用</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>13. SMW-Copper50化学铜</h3>
+                            <p>特别研发来应用于功能性镀层的化学铜药水，沉积厚度可达25微米，适合用在厚铜沉积时使用。镀层细致、平整呈亮粉红色，镀层应力低且沉积速率快，正常条件每小时可沉积3.5-5毫米。</p>
+                            <ul class="product-detail-list">
+                                <li>细密精致的铜镀层</li>
+                                <li>镀层应力低，与底材具良好结合力</li>
+                                <li>高低负载都适合</li>
+                                <li>槽液稳定性高，减少槽液保养之人力消耗</li>
+                                <li>沉积速率快且稳定，沉积厚度容易掌控</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 镀镍系列 -->
+                    <div id="nickel-plating" class="product-category">
+                        <h2>镀镍系列</h2>
+                        
+                        <div class="product-group">
+                            <h3>16. 电铸镍电镀 (Nickel Electroforming Solution)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>NS-900</strong> - 氨基磺酸镍（电铸、单液）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>19. 其它镀镍产品 (Other Nickel Process)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Ni-LCD</strong> - 强力走位剂</li>
+                                <li><strong>NK-AP</strong> - 光镍湿润剂</li>
+                                <li><strong>Super 10</strong> - 光镍走位剂（珍珠镍浴亦可用）</li>
+                                <li><strong>黑镍盐2#</strong> - 镍盐</li>
+                                <li><strong>HANI</strong> - 高硫镍</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>Nibrel系列化学镀镍产品</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Nibrel-EN</strong> - 化学镀镍</li>
+                                <li><strong>NR-2000</strong> - 镍铬置换工艺</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 镀铬系列 -->
+                    <div id="chrome-plating" class="product-category">
+                        <h2>镀铬系列</h2>
+                        
+                        <div class="product-group">
+                            <h3>10. DCR-100铬中和剂</h3>
+                            <p><strong>特性和优点：</strong></p>
+                            <ul class="product-detail-list">
+                                <li>高的六价铬处理能力</li>
+                                <li>处理六价铬彻底</li>
+                                <li>无需高频率分析添加</li>
+                                <li>槽液稳定性高</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>20. 铬电镀 (Chromium Plating Process)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Cr-1127</strong> - 硬铬添加剂</li>
+                                <li><strong>Cr-1131</strong> - 黑铬添加剂</li>
+                                <li><strong>F-Solution</strong> - 铬防雾剂</li>
+                                <li><strong>Ct-100</strong> - 铬走位盐</li>
+                                <li><strong>Ct-101</strong> - 光亮铬添加剂（可用高低铬酸）</li>
+                                <li><strong>Ct-2000</strong> - 超光亮铬添加剂（可用高低铬酸）</li>
+                                <li><strong>NP-2F</strong> - 铬粗化剂</li>
+                                <li><strong>TriVVC</strong> - 环保三价白铬电镀</li>
+                                <li><strong>TriCCC</strong> - 环保三价晶炭铬电镀</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 镀锌系列 -->
+                    <div id="zinc-plating" class="product-category">
+                        <h2>镀锌系列</h2>
+                        
+                        <div class="product-group">
+                            <h3>21. 无氰碱性锌电镀 (Non-cyanide Plating Process)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>HN-NK</strong> - 碱性无氰镀锌光剂（光泽度好，走位特佳，适用于形状复杂或有深孔的工件电镀以及滚镀）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>22. 氰化锌电镀 (Cyanide Zinc Plating Solution)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>HN-641</strong> - 氰化镀锌光亮剂（滚镀，挂镀皆宜）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>23. 酸性锌电镀 (Acid Zinc Plating Process)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>HN-718</strong> - 酸性镀锌光亮剂（超光亮，填平走位极佳，钝化上色容易）</li>
+                                <li><strong>Zinc bath Avant</strong> - 弱酸性镀锌</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 特殊工艺 -->
+                    <div id="special-process" class="product-category">
+                        <h2>特殊工艺</h2>
+                        
+                        <div class="product-group">
+                            <h3>11. Uclean680清洗剂</h3>
+                            <p>Uclean680清洗剂是低泡性，改善LDS产品化学镀性能，通常配合超声波设备一起使用，可以有效的去除LDS产品上的低附着性的激光雕刻时产生的灰尘，避免漏镀发生。残留的Uclean680药液可以很容易清洗掉。</p>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>12. PS880预粗化剂</h3>
+                            <p>PS880是研发用于消除塑料内应力，去除成型时积累在塑料件中的空气，避免在化学镀高温作用时，由于塑料内应张力释放下导致塑料件里的空气释放出，在镀层上形成气泡或弱的镀层结合力。</p>
+                            <p><strong>特性和优点：</strong></p>
+                            <ul class="product-detail-list">
+                                <li>高效的内应力去除</li>
+                                <li>操作简单</li>
+                                <li>无需高频率分析添加</li>
+                                <li>槽液稳定性高</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>14. ST310粗化添加剂</h3>
+                            <p>ST310粗化添加剂是低泡添加剂，用于粗化表面张力调整，使复杂的ABS、SPS等复杂表面也能充分处理，进而得到一致金属沉积。</p>
+                            <p><strong>优点：</strong></p>
+                            <ul class="product-detail-list">
+                                <li>稳定，可长时间存储使用</li>
+                                <li>低添加量就可以降低粗化液表面张力</li>
+                                <li>使产品得到一致的处理效果</li>
+                                <li>减少粗化液带出</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>15. SNI-110活化剂</h3>
+                            <p>SNI-110是用于镀铜表面的活化黄色透明液，便于镀铜表面进行化学镀镍。有良好的活性和稳定性。SNI110需要和（36%）HCl分析纯盐酸同时使用。</p>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>24. 镁合金化成皮膜处理工艺 (MgCC Process)</h3>
+                            <p>IBM手提电脑指定唯一无铬化成皮膜工艺</p>
+                            <ul class="product-detail-list">
+                                <li><strong>BGF-220H</strong> - 镁合金脱脂剂</li>
+                                <li><strong>MgCC-A/B</strong> - 化成处理剂</li>
+                                <li><strong>MgCC-D</strong> - 导电化处理剂</li>
+                                <li><strong>MgCC-CNT</strong> - 调整处理剂</li>
+                                <li><strong>MgCC-F</strong> - 后处理剂</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>25. SM镁合金电镀前处理工艺</h3>
+                            <ul class="product-detail-list">
+                                <li>SM镁合金电镀前处理 浸蚀剂</li>
+                                <li>SM镁合金电镀前处理 活化剂</li>
+                                <li>SM镁合金电镀前处理 中和剂</li>
+                                <li>SM镁合金电镀前处理 锌置换剂</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>30. 铝阳极氧化处理 (Anodizing, Aluminium Process)</h3>
+                            <p>铝氧化染料系列：</p>
+                            <ul class="product-detail-list">
+                                <li>G染料 - 铝氧化的橙染料</li>
+                                <li>L染料 - 铝氧化的金染料</li>
+                                <li>翠蓝染料 - 铝氧化的翠蓝染料</li>
+                                <li>淡紫染料 - 铝氧化的淡紫染料</li>
+                                <li>橙RL染料 - 铝氧化的橙染料</li>
+                                <li>黑染料 - 铝氧化的黑染料</li>
+                                <li>青铜染料 - 铝氧化的青铜染料</li>
+                                <li>宝蓝染料 - 铝氧化的宝蓝染料</li>
+                                <li>蓝G染料 - 铝氧化的蓝染料</li>
+                                <li>火红染料 - 铝氧化的火红染料</li>
+                                <li>姿红染料 - 铝氧化的姿红染料</li>
+                                <li>4N金色染料 - 铝氧化无机金色染料</li>
+                                <li>青铜L染料 - 铝氧化的青铜染料</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 环保电镀 -->
+                    <div id="green-plating" class="product-category">
+                        <h2>ZINEX环保电镀工艺 (Green Plating Process)</h2>
+                        
+                        <div class="product-group">
+                            <h3>I. 无氰镀铜产品</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Copper Strike</strong> - 无氰预镀铜</li>
+                                <li><strong>Cobre Bath</strong> - 无氰镀铜（可用于电铸）</li>
+                                <li><strong>ZICAST</strong> - 无氰碱性预镀铜（锌合金、铝材）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>II. 合金电镀产品</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Zerochrome</strong> - 无氰锡钴合金（代用铬）</li>
+                                <li><strong>Unigleam</strong> - 无氯锡锌合金（代用镍）</li>
+                                <li><strong>Viro-Brass</strong> - 无氰仿金</li>
+                                <li><strong>Viro-Bronze</strong> - 无氰光亮镀青铜</li>
+                                <li><strong>Viro-Black</strong> - 无镍枪色</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>III. 无氰镀金、镀银产品</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Silver Gleam</strong> - 无氰光亮镀银</li>
+                                <li><strong>Viro-Gold</strong> - 无氰镀金</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>IV. 镀锡、镀镍产品</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>Zitin Pure Tin</strong> - 光亮纯锡（具优越的可焊性）</li>
+                                <li><strong>Nibrel-R</strong> - 光亮镀镍</li>
+                                <li><strong>Nibrel-EN</strong> - 化学镀镍</li>
+                                <li><strong>NR-2000</strong> - 镍铬置换工艺</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 镀后处理 -->
+                    <div id="post-treatment" class="product-category">
+                        <h2>27. 镀后处理 (Post-treatment Process)</h2>
+                        
+                        <div class="product-group">
+                            <ul class="product-detail-list">
+                                <li><strong>I.D.R</strong> - 脱水剂（干燥后有微膜保护）</li>
+                                <li><strong>VP 392</strong> - 保护剂（水溶性）</li>
+                                <li><strong>Avant D</strong> - 防护剂（防止镀层氧化）</li>
+                                <li><strong>BT-8</strong> - 铜变色防止剂</li>
+                                <li><strong>CH</strong> - 铝氧化封闭剂</li>
+                                <li><strong>Maruseru</strong> - 水蜡架</li>
+                                <li><strong>RIP</strong> - 脱钯剂</li>
+                                <li><strong>Antifinger Print</strong> - 防指纹及保护剂</li>
+                                <li><strong>NRP-20A</strong> - 化学镀镍剥离剂</li>
+                                <li><strong>Rip Master Plus</strong> - 脱镍剂（无氰）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>28. 电泳漆 (Electrophoresis Lacquer)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>EP-5000</strong> - 阴极电泳漆</li>
+                                <li><strong>EC-2000</strong> - 阴极透明电泳漆</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 贵金属产品 -->
+                    <div id="precious-metals" class="product-category">
+                        <h2>29. 贵金属电镀原料 (Precious Metal Products)</h2>
+                        
+                        <div class="product-group">
+                            <ul class="product-detail-list">
+                                <li>68.3% 金盐 (Gold Salt)</li>
+                                <li>40% 金盐 (Gold Salt)</li>
+                                <li>80.5% 银盐 (Silver Salt)</li>
+                                <li>54.2% 银盐 (Silver Salt)</li>
+                                <li>99.99% 银阳极（狗骨形）Dog-bone-shaped Silver Anode</li>
+                                <li>99.99% 银粒 Grained Silver Anode</li>
+                                <li>50.3% 氯化铵钯 Palladium Salt</li>
+                                <li>60% 氯化钯 Palladium Salt</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 设备仪器 -->
+                    <div id="equipment" class="product-category">
+                        <h2>设备仪器系列</h2>
+                        
+                        <div class="product-group">
+                            <h3>17. 专业污水处理</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>高铜处理剂SWDTC-2</strong></li>
+                                <li>48% 氢氧化钠</li>
+                                <li>30% 氢氧化钠</li>
+                                <li>37% 三氯化铁</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>18. 玻璃仪器，试验器材</h3>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>33. 整流机系列 (Rectifiers For Plating)</h3>
+                            <ul class="product-detail-list">
+                                <li>SCR整流机 5A-6000A（风冷）</li>
+                                <li>级调式整流机 5A-6000A（风冷）</li>
+                                <li>手调式整流机 5A-6000A（风冷）</li>
+                                <li>开关式整流机 5A-3000A（风冷）</li>
+                                <li>脉冲整流机 5A-4000A（风冷）</li>
+                                <li>安培分钟计 可边加药器</li>
+                                <li>时间控制计 可声闹及自动停电选择</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>34. 钛制品系列 (Titanium Products For Plating)</h3>
+                            <ul class="product-detail-list">
+                                <li>钛篮（可按客户规格订造）</li>
+                                <li>钛篮袋（配合钛篮尺寸及各款阳极袋）</li>
+                                <li>钛冷却管及加热器（可来图订造）</li>
+                                <li>Teflon冷却、加热管（可来图订造）</li>
+                                <li>大小钛钩（亦可按客户规格订造）</li>
+                                <li>各类型钛挂具</li>
+                                <li>钛包铝、钛包铜棒</li>
+                                <li>钛板、钛线、优质白金钛网（阳极）</li>
+                                <li>钛螺丝（可按客户规格订造）</li>
+                                <li>钛螺母、钛介指</li>
+                                <li>铝氧化铝棒用胶夹具</li>
+                                <li>钌、铱金属混合氧化皮膜MMO（阳极）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>35. 过滤器及水处理系列 (Filtration & Water Treatment)</h3>
+                            <ul class="product-detail-list">
+                                <li>磁性过滤器 600-30000升/小时（PP、CPVC、PVDF）</li>
+                                <li>槽边直立式过滤器 600-30000升/小时（PP、CPVC、PVDF）</li>
+                                <li>无电沉镍高温过滤器</li>
+                                <li>机械密封过滤器 4000-30000升/小时（PP双层轴封设备）</li>
+                                <li>普通水喉用过滤器 10" 20" 30"（受压特强）</li>
+                                <li>Drum Pump #510 手摇桶泵（酸、碱、溶剂介质皆可）</li>
+                                <li>Drum Pump CP-51BPVC 电动手提泵</li>
+                                <li>潜水泵（普通不锈钢料、316不锈钢料、钛料可供选择）</li>
+                                <li>圆桶泵（按掣直抽式，PP、316不锈钢管可选择）</li>
+                                <li>滤芯 4" 10" 20" 30"（PP、纯棉、纸）</li>
+                                <li>碳滤芯 10" 20" 30"（粒、粉、PP夹碳粉）</li>
+                                <li>超滤芯 10" 20" 30" 40" 中空纤维超滤管 电泳漆浴液专用（美国）</li>
+                                <li>离子交换树脂（三价铬专用）</li>
+                                <li>离子交换纯水器 JK-100 / JK-200</li>
+                                <li>730系列纯水机（自动复床式，流量为0.1~10M³/H）</li>
+                                <li>R/O逆渗透纯水机（自动超纯度）</li>
+                                <li>离子交换机</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>36. 电镀机械 (Machinery For Plating)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>EN Controller Professional</strong> - 化学镀镍自动分析及补充系统</li>
+                                <li><strong>E-OxidationEN</strong> - 化学镀镍镍回收及COD处理系统</li>
+                                <li>全自动电镀生产线（PLC编程控制）</li>
+                                <li>机械摇摆机（挂头数量可选择）</li>
+                                <li>镀金单臂电镀机（镀金单槽设备齐全方便使用上下摇摆选择）</li>
+                                <li>超声波清洗机（各种尺寸，挂槽式）</li>
+                                <li>金银回收机（电解式处理）</li>
+                                <li>各款挂具（装饰电镀、自动机用挂具）</li>
+                                <li>大小滚镀筛及滚镀生产线</li>
+                                <li>大小水洗槽、各种电镀槽、全厂设计、布局、划图等工程</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>37. 测厚仪系列 (Thickness Testers)</h3>
+                            <ul class="product-detail-list">
+                                <li><strong>CT-1 & CT-2</strong> - 破坏式测厚仪（可测定金、无电解镍、银、铬、锌、铜、锡、铅、铟，锡-锌、锡-铅、铜-锌、镍-锌合金镀层）</li>
+                                <li><strong>GC-01</strong> - 破坏式测厚仪（可测定金、无电解镍、银、铬、锌、铜、锡、铅、铟、锡-锌、锡-铅、铜-锌、镍-锌合金镀层）</li>
+                                <li><strong>Beta-BTG-55</strong> - 非破坏式测厚仪（可测定金、银、铑、锡、镍、铅-锡、铜-锡、涂料镀层）</li>
+                                <li><strong>EX-9000 X-光</strong> - 非破坏式非接触式测厚仪（金-镍、铜-锡、镍-铜、铬-镍、银-镍，可配显示器、打印机）</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>38. 化验分析设备 (Chemical Analysis Instrument)</h3>
+                            <ul class="product-detail-list">
+                                <li>Hull Cell Testing Set - 侯氏槽试验设备</li>
+                                <li>Sulphameter - 铬镀液测硫酸器（电、手动）</li>
+                                <li>Test Kit of Ni-Sulphate - 镍液分析器</li>
+                                <li>Test Kit of Stannous Sulfate - 硫酸锡分析器</li>
+                                <li>Test Kit of Zinc Cyanide - 氰化锌分析器</li>
+                                <li>Test Kit of Copper Cyanide - 氰化铜分析器</li>
+                                <li>Test Kit of Copper Sulfate - 硫酸铜分析器</li>
+                                <li>Trichrome Meter - 三价铬比色计</li>
+                                <li>Anode for Hull Cell - 各类侯氏槽用阳极</li>
+                                <li>Cathode for Hull CELL - 侯氏槽用阴极片（铜、铁）</li>
+                                <li>Heater for Hull CELL - 侯氏槽用加热电笔</li>
+                                <li>大小盐雾喷射试验机</li>
+                                <li>12B PH计 - 手提式液晶显示</li>
+                                <li>PH试纸（条装、卷装、卷合）</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 化工原料 -->
+                    <div id="materials" class="product-category">
+                        <h2>32. 其它化工原料 (Other Chemical Materials)</h2>
+                        
+                        <div class="product-group">
+                            <h3>镍系列</h3>
+                            <ul class="product-detail-list">
+                                <li>硫酸镍 Nickel Sulphate</li>
+                                <li>氯化镍 Nickel Chloride</li>
+                                <li>碳酸镍 Nickel Carbonate</li>
+                                <li>氨基磺酸镍 Nickel Sulphamate</li>
+                                <li>硫酸镍铵 Ammonium Nickel Sulphate</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>铜系列</h3>
+                            <ul class="product-detail-list">
+                                <li>焦磷酸铜 Copper Pyrophosphate</li>
+                                <li>碳酸铜 Copper Carbonate</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>钾钠系列</h3>
+                            <ul class="product-detail-list">
+                                <li>焦磷酸钾 Potassium Tetra Pyrophosphate</li>
+                                <li>碳酸钾 Potassium Carbonate</li>
+                                <li>碳酸钠 Sodium</li>
+                                <li>次亚磷酸钠 Sodium Hypophosphite</li>
+                                <li>亚硫酸钠 Sodium Sulphite</li>
+                                <li>重铬酸钠 Sodium Dichromate</li>
+                                <li>硫氰化钠 Sodium Thiocyanate</li>
+                                <li>柠檬酸钠 Sodium Citrate</li>
+                                <li>氢氧化钠 Sodium Hydroxide</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>氯化物系列</h3>
+                            <ul class="product-detail-list">
+                                <li>氯化铵 Ammonium Chloride</li>
+                                <li>氯化钾 Potassium Chloride</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>其它化工原料</h3>
+                            <ul class="product-detail-list">
+                                <li>氨基磺酸钴 Cobalt Sulphamate</li>
+                                <li>氨基磺酸 Sulphamic Acid</li>
+                                <li>酒石酸钾钠 Potassium Sodium Tartrate</li>
+                                <li>柠檬酸 Citric Acid</li>
+                                <li>柠檬酸钾 Potassium Citrate</li>
+                                <li>重铬酸钾 Potassium Dichromate</li>
+                                <li>碳酸钡 Barium Carbonate</li>
+                                <li>助滤粉 Filter Aid</li>
+                                <li>三氯乙烯 Trichloroethylene</li>
+                                <li>挂具绝缘胶油 Plating Rack Plastisol</li>
+                                <li>挂具胶粉 Plating Rack Insulating Powder</li>
+                                <li>硫酸亚锡 Stannous Sulphate</li>
+                                <li>氯化亚锡 Stannous Chloride</li>
+                                <li>铬酸片 Chromium Trioxide</li>
+                                <li>氧化锌 Zinc Oxide</li>
+                                <li>活性碳粒 Activated Carbon Granular</li>
+                                <li>活性碳粉 Activated Carbon Power</li>
+                                <li>工业硫酸 Industrial Graded Sulphuric Acid</li>
+                                <li>工业盐酸 Industrial Graded Hydrochloric Acid</li>
+                                <li>工业硝酸 Industrial Graded Nitric Acid</li>
+                                <li>纯氨水 Ammonium Water</li>
+                            </ul>
+                        </div>
+
+                        <div class="product-group">
+                            <h3>各种化工试剂</h3>
+                        </div>
+                    </div>
+
+                    <!-- 阳极材料 -->
+                    <div id="anodes" class="product-category">
+                        <h2>31. 电镀用阳极 (Anodes for Plating)</h2>
+                        
+                        <div class="product-group">
+                            <ul class="product-detail-list">
+                                <li>磷铜角 - 含磷0.04-0.06%</li>
+                                <li>磷铜条 - 含磷0.04-0.06%</li>
+                                <li>锡铅阳极（60/40, 63/67）Solder</li>
+                                <li>镍板24" Nickel Plate</li>
+                                <li>镍角1"x1" Nickel Square</li>
+                                <li>镍饼"S" Nickel S-Crown</li>
+                                <li>无氧电解铜板24" 28" 30" OFHC Copper Plate</li>
+                                <li>无氧电解铜角1"X1" OFHC Copper Nugget</li>
+                                <li>铬板24" 30" 36" Cr. Plating Plate</li>
+                                <li>锌砖（澳洲产）</li>
+                                <li>锌条16"X4" Zinc Briquette</li>
+                                <li>黄铜板24" 30" 36" Brass Plate</li>
+                                <li>24" 炭板阳极（可按尺寸开料）Graphite Plate</li>
+                                <li>三价铬专用石墨阳极（美国原装）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>需要了解更多产品信息？</h2>
+            <p>我们的专业团队随时为您提供技术支持和产品咨询</p>
+            <a href="#" class="btn-secondary">立即联系我们</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>青岛三文化工有限公司</h4>
+                    <p>专业化工服务企业</p>
+                    <p>成立于2002年</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="products.html">产品中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>地址：青岛经济技术开发区</p>
+                    <p>占地面积：10000平方米</p>
+                </div>
+                <div class="footer-section">
+                    <h4>资质认证</h4>
+                    <p>ISO9001:2008质量管理体系</p>
+                    <p>危险化学品从业资质</p>
+                    <p>易制毒化学品经营证书</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 青岛三文化工有限公司</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,125 +1,180 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>关于我们 | 三文化工</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <style>
-    .container {
-      display: flex;
-      padding: 20px;
-    }
-
-    .sidebar {
-      width: 200px;
-      margin-right: 20px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sidebar li {
-      margin: 10px 0;
-      cursor: pointer;
-      color: #0073aa;
-    }
-
-    .sidebar li:hover {
-      text-decoration: underline;
-    }
-
-    .content-section {
-      display: none;
-    }
-
-    .content-section.active {
-      display: block;
-    }
-
-    .main-content {
-      flex: 1;
-    }
-
-    .main-content h2 {
-      margin-top: 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 青岛三文化工有限公司</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>三文化工</h1>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我们</a>
-      <a href="products.html">产品列表</a>
-      <a href="safety.html">安全与运输</a>
-      <a href="contact.html">联系我们</a>
-    </nav>
-  </header>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>青岛三文化工</h1>
+                <p class="tagline">专业化工服务 品质铸就未来</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html" class="active">关于我们</a></li>
+                    <li><a href="products.html">产品中心</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main class="container">
-    <aside class="sidebar">
-      <h3>关于我们</h3>
-      <ul>
-        <li onclick="showSection('intro')">公司简介</li>
-        <li onclick="showSection('license')">经营资质</li>
-        <li onclick="showSection('brands')">合作品牌</li>
-        <li onclick="showSection('advantage')">我们的优势</li>
-      </ul>
-    </aside>
-
-    <section class="main-content">
-      <div id="intro" class="content-section active">
-        <h2>公司简介</h2>
-        <p>
-          三文化工专注于化工、糖类、醇类等多个领域的产品研发、销售与国际贸易。我们致力于为客户提供高品质、稳定可靠的产品解决方案。
-        </p>
-      </div>
-
-      <div id="license" class="content-section">
-        <h2>经营资质</h2>
-        <p>
-          我们拥有完整的进出口权、危险化学品经营许可证，以及符合国际标准的产品检测与质量认证资质。
-        </p>
-        <img src="assets/img/营业执照.jpg" alt="营业执照或认证资质" style="max-width: 100%; height: auto; margin-top: 10px;">
-        <img src="assets/img/危险化学品经营许可证.jpg" alt="营业执照或认证资质" style="max-width: 100%; height: auto; margin-top: 10px;">
-        <img src="assets/img/非药品类易制毒化学品经营备案证明.jpg" alt="营业执照或认证资质" style="max-width: 100%; height: auto; margin-top: 10px;">
-      </div>
-
-      <div id="brands" class="content-section">
-        <h2>合作品牌</h2>
-        <p>
-          我们与多家全球知名化工企业保持长期合作关系，提供全球领先的原材料与配套技术服务。
-        </p>
-      </div>
-
-      <div id="advantage" class="content-section">
-        <h2>我们的优势</h2>
-        <p>
-          高效供应链、专业技术团队、快速响应客户需求、严格的品质控制流程是我们持续发展的核心优势。
-        </p>
-      </div>
+    <section class="page-header">
+        <div class="container">
+            <h1>关于我们</h1>
+            <p>专业化工服务企业 · 二十余年行业经验</p>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 三文化工 | 版权所有</p>
-  </footer>
+    <section class="company-intro">
+        <div class="container">
+            <h2 class="section-title">公司简介</h2>
+            <div class="intro-content">
+                <div class="intro-text">
+                    <p>青岛三文化工有限公司成立于2002年4月，是服务于电镀、化学镀、合金、化工添加剂工艺品等制造行业的专业服务型企业。公司地处美丽的海滨城市青岛经济技术开发区，交通便利、环境优美，占地面积一万平方米。</p>
+                    <p>公司自创立以来秉承"质量第一、客户满意、持续改善、文明服务"的经营理念，始终将客户的需求放在首位。经过二十余年的稳健发展，三文化工在服务其他企业的同时也实现了自身的跨越式发展。</p>
+                    <p>我们拥有青岛市危险化学品从业单位认可证书、易制毒化学品经营证书，并通过ISO9001:2008质量管理体系认证。公司拥有自主进出口权，能够直接与国际知名化工企业合作，为客户提供优质的进口化工产品和技术服务。</p>
+                    <p>公司配备先进的化学实验室和检测设备，拥有经验丰富的技术工程师团队，能够为客户提供产品检测、工艺优化等专业技术支持服务。同时，我们拥有自己的物流配送车队，配备危险化学品运输车辆、专业危险品司机和押运员，确保安全高效的产品配送。</p>
+                </div>
+                <div class="intro-image">
+                    <img src="images/company-building.jpg" alt="青岛三文化工办公大楼">
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function showSection(id) {
-      const sections = document.querySelectorAll('.content-section');
-      sections.forEach(section => {
-        section.classList.remove('active');
-      });
-      document.getElementById(id).classList.add('active');
-    }
+    <section class="certifications">
+        <div class="container">
+            <h2 class="section-title">经营资质</h2>
+            <p class="section-subtitle">我们拥有完善的资质认证，确保合规经营</p>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/cert-1.jpg" alt="危险化学品从业单位认可证书">
+                    </div>
+                    <h3>危险化学品从业单位认可证书</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/cert-2.jpg" alt="易制毒化学品经营证书">
+                    </div>
+                    <h3>易制毒化学品经营证书</h3>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-image">
+                        <img src="images/cert-3.jpg" alt="ISO9001质量管理体系认证">
+                    </div>
+                    <h3>ISO9001质量管理体系认证</h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    // 默认显示公司简介
-    showSection('intro');
-  </script>
+    <section class="partners">
+        <div class="container">
+            <h2 class="section-title">合作品牌</h2>
+            <p class="section-subtitle">与国内外知名企业深度合作，为客户提供优质产品</p>
+            <div class="partners-grid">
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-1.jpg" alt="安美特">
+                    </div>
+                    <h3>安美特</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-2.jpg" alt="乐思">
+                    </div>
+                    <h3>乐思</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-3.jpg" alt="美国优耐">
+                    </div>
+                    <h3>美国优耐</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-4.jpg" alt="德国巴斯夫">
+                    </div>
+                    <h3>德国巴斯夫</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-5.jpg" alt="广东高力">
+                    </div>
+                    <h3>广东高力</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-6.jpg" alt="INCO">
+                    </div>
+                    <h3>INCO</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-7.jpg" alt="青岛海晶化工">
+                    </div>
+                    <h3>青岛海晶化工</h3>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo">
+                        <img src="images/partner-8.jpg" alt="青岛海湾集团">
+                    </div>
+                    <h3>青岛海湾集团</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>携手三文化工 共创美好未来</h2>
+            <p>专业的产品 优质的服务 值得信赖的合作伙伴</p>
+            <a href="#" class="btn-secondary">立即联系我们</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>青岛三文化工有限公司</h4>
+                    <p>专业化工服务企业</p>
+                    <p>成立于2002年</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="products.html">产品中心</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>联系方式</h4>
+                    <p>地址：青岛经济技术开发区</p>
+                    <p>占地面积：10000平方米</p>
+                </div>
+                <div class="footer-section">
+                    <h4>资质认证</h4>
+                    <p>ISO9001:2008质量管理体系</p>
+                    <p>危险化学品从业资质</p>
+                    <p>易制毒化学品经营证书</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 青岛三文化工有限公司</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
