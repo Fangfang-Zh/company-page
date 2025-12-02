@@ -707,7 +707,8 @@ footer {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 2px;
-    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;	
     position: sticky;
     top: 100px;
     border: 1px solid #eeeeee;

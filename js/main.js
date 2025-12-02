@@ -74,7 +74,24 @@ window.addEventListener('scroll', function() {
 // 产品分类平滑滚动
 document.addEventListener('DOMContentLoaded', function() {
     const categoryLinks = document.querySelectorAll('.category-list a');
-    
+    const productCategories = document.querySelectorAll('.product-category');
+    const sidebar = document.querySelector('.products-sidebar');
+
+    // 把高亮的这一行滚到侧边栏中间
+    function centerActiveLink(link) {
+        if (!sidebar || !link) return;
+
+        const sidebarRect = sidebar.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        // 计算需要滚动的距离：让 link 垂直居中于 sidebar
+        const offset = (linkRect.top - sidebarRect.top)
+                     - (sidebarRect.height / 2 - linkRect.height / 2);
+
+        sidebar.scrollTop += offset;
+    }
+
+    // 点击左侧分类：平滑滚动 + 高亮 + 居中
     categoryLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -83,6 +100,9 @@ document.addEventListener('DOMContentLoaded', function() {
             categoryLinks.forEach(l => l.classList.remove('active'));
             // 添加active类到当前链接
             this.classList.add('active');
+
+            // 让当前点击的这一行居中到侧边栏中间
+            centerActiveLink(this);
             
             // 获取目标ID
             const targetId = this.getAttribute('href');
@@ -101,9 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 滚动时更新active状态
-    const productCategories = document.querySelectorAll('.product-category');
-    
+    // 滚动时更新active状态 + 让active行居中
     if (productCategories.length > 0) {
         window.addEventListener('scroll', function() {
             let current = '';
@@ -117,12 +135,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
+            let activeLink = null;
+
             categoryLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === '#' + current) {
                     link.classList.add('active');
+                    activeLink = link;
                 }
             });
+
+            // 当你滚到比如 15. SNI-110 那一块时，
+            // 对应的 link 被设置为 active，这里把它滚到侧栏中间
+            if (activeLink) {
+                centerActiveLink(activeLink);
+            }
         });
     }
 });
